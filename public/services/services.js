@@ -1,5 +1,7 @@
 define(['angular'], function(angular) {
 
+    var web_url = "http://starstech.cc";
+
     var app = angular.module('services', ['ngResource']);
 
     app.service('UserService', function($resource) {
@@ -30,6 +32,24 @@ define(['angular'], function(angular) {
                 }
             });
         };
+    });
+
+    app.service('FoodService', function ($resource) {
+        this.getFoodList = function () {
+            return $resource(web_url + "/WebServiceEx.asmx/JSON_Decrypt?_dc=1468307972369", {}, {
+                query: {
+                    method: "POST"
+                }
+            });
+        }
+
+        this.getCustomerList = function () {
+            return $resource(web_url + "/customer.json?1468307972432", {}, {
+                query: {
+                    method: "GET"
+                }
+            });
+        }
     });
 
     return app;
