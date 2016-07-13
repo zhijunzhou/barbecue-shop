@@ -9,7 +9,8 @@ require.config({
         'controllers':'controllers/controllers',
         'filters': 'filters/filters',
         'directives': 'directives/directives',
-        'services':'services/services'
+        'services':'services/services',
+        'data':'model/data'
     },
     map:{
       '*': {
@@ -55,7 +56,8 @@ function loadCss(urls) {
 }
 
 loadCss([
-    'libs/bootstrap.min.css'
+    'libs/bootstrap.min.css',
+    'css/styles.css',
 ]);
 
 require(["angular","app"],function(angular,app){

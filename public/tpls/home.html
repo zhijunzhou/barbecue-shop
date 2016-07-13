@@ -1,5 +1,37 @@
-<div class="body-container">
-	<div class="container-fluid" ng-controller="HomeController">
-		<h1>Test</h1>
-	</div>
+<header class="shop-header">
+    <a class="shop-logo icon-logo-shop"><b>Shop Logo</b></a>
+    <nav class="header-user-info pull-right">
+        <a class="link" href="/login">登录</a> |
+        <a class="link" href="/register">注册</a>
+    </nav>
+</header>
+<div class="col-xs-12 ui-block">
+    <h6 class="geo-title">
+        当前定位城市： 
+        <small class="geo-title-note">定位不准时，请在城市列表中选择</small>
+    </h6>
+</div>
+<div class="col-xs-12 geo-cities-wrapper">
+    <h6 class="geo-title">
+        热门城市
+    </h6>
+    <div class="geo-cities col-xs-12">
+        <div class="col-xs-3" ng-repeat="hc in hotCities">
+            <a class="geo-city-hot">{{hc.name}}</a>
+        </div>
+    </div>
+</div>
+
+<div class="col-xs-12 geo-cities-wrapper" ng-repeat="x in [1,2,3]">    
+    <div class="geo-cities col-xs-12">
+        <div class="col-xs-3" ng-repeat="hc in hotCities">
+            <a class="geo-city">{{hc.name}}</a>
+        </div>
+        <div class="col-xs-3" ng-repeat="hc in hotCities">
+            <a class="geo-city">{{hc.name}}</a>
+        </div>
+        <div class="col-xs-3" ng-repeat="hc in hotCities">
+            <a class="geo-city">{{hc.name}}</a>
+        </div>
+    </div>
 </div>

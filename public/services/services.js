@@ -1,6 +1,6 @@
 define(['angular'], function(angular) {
 
-    var web_url = "http://starstech.cc";
+    var web_url = "http://localhost:81";
 
     var app = angular.module('services', ['ngResource']);
 
