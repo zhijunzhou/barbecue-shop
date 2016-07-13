@@ -58,10 +58,24 @@ define(function (require) {
 		}
 	];
 
+	var tabs = [
+		{
+			name:'菜单',
+			state: true
+		}, {
+			name:'评价',
+			state: false
+		}, {
+			name: '商家',
+			state: false
+		}
+	];
+
 	return {
 		goodType: goodType,
-		hotCities:hotCities
-	}
+		hotCities:hotCities,
+		tabs:tabs,
+	};
 
 });
 

@@ -1,18 +1,22 @@
 define(['angular', 'require', 'angular-route','angular-resource','bootstrap','controllers','filters','directives','services','data'], function (angular, require) {
-    var app = angular.module("BarbecueShop", ['ngRoute','ngResource','controllers','filters','directives','services']);
+    var app = angular.module('BarbecueShop', ['ngRoute','ngResource','controllers','filters','directives','services']);
 
     app.config(function($routeProvider,$locationProvider,$controllerProvider) {
 
         $routeProvider
             .when('/', {
-                controller: "HomeController",
+                controller: 'HomeController',
                 templateUrl:'tpls/home.html'
+            })
+            .when('/shop', {
+                controller: 'ShopController',
+                templateUrl: 'tpls/shop.html'
             })
             .otherwise({
                 redirectTo: '/'
             });
 
-        $locationProvider.html5Mode(false);
+        $locationProvider.html5Mode(true);
     });
 
     return app;

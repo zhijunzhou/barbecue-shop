@@ -14,6 +14,12 @@ body {
 	margin: 0;
 }
 
+ol, ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
 .appBody {
 	padding-bottom: 54px;
 }
@@ -26,7 +32,7 @@ body {
 	color: #fff;
 	line-height: 44px;
 }
-.shop-logo {
+.header-back,.shop-logo {
 	padding: 0 0 0 10px;
 } 
 .icon-logo-shop {
@@ -55,9 +61,11 @@ a {
 	font-size: .75rem;
 	padding: 0 10px 0 0;
 }
+.header-back,.header-user-info>.link {	
+	color: #fff;
+}
 .header-user-info>.link {
 	padding: 4px;
-	color: #fff;
 }
 .ui-block, .ui-padding-block {
     margin-top: 10px;
@@ -82,4 +90,41 @@ a {
 }
 .geo-city-hot {
 	color: #08c;
+}
+.restaurant-tabs {
+	z-index: 10;
+    display: block;
+    background: #fff;
+    margin-bottom: 1px;
+}
+
+.restaurant-tabs .restaurant-tab {
+    display: inline-block;
+    width: 33.33%;
+    text-align: center;
+    font-size: 14px;
+    line-height: 15px;
+    padding-top: 10.5px;
+    padding-bottom: 11px;
+    border-bottom: 2px solid #ddd;
+}
+.restaurant-tab.active {
+    color: #3199e8;
+    border-bottom: 2px solid #3199e8;
+}
+
+.restaurant-menu {
+	border-right: 1px solid #ddd;
+	height: 100%;
+	overflow-y: auto;
+	background: #f7f7f7; 
+}
+.restaurant-menu {
+	box-sizing: border-box;
+}
+
+.restaurant-food {
+	height: 100%;
+	overflow-y: auto; 
+	background: #e9e9e9;
 }

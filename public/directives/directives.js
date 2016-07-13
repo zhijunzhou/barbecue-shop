@@ -50,6 +50,36 @@ define(['angular'], function(angular) {
         };
     });
 
+    app.directive('restaurantTab', function() {
+        return {
+            restrict: "E",
+            scope: {
+                state: "=",
+                restaurant: "="
+            },
+            templateUrl: "tpls/tabs.html",
+            link: function(r) {
+                r.tabs = [{
+                    name: "菜单",
+                    state: "menu"
+                }, {
+                    name: "评价",
+                    state: "ratings"
+                }, {
+                    name: "商家",
+                    state: "info"
+                }],
+                r.changeState = function(r) {
+                    
+                }
+            }
+        };
+    });
+
+    app.directive('menuNav', function() {
+
+    });
+
     app.directive('loading', function() {
         return {
             restrict: 'E',

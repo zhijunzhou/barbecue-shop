@@ -1,0 +1,3 @@
+<ul class="restaurant-tabs">
+    <li ng-repeat="tab in tabs" class="restaurant-tab" ng-class="{active: state === tab.state}" ng-bind="tab.name" ng-click="changeState(tab.state)"></li>
+</ul>
