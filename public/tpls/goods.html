@@ -1,0 +1,22 @@
+<div class="list-group">
+	<div class="list-group-item" ng-show="goods.length <= 0">该品类没有任何商品</div>
+	 
+    <div class="list-group-item good-item col-xs-12" ng-repeat="gd in goods">
+    	<div class="col-xs-4">
+    		<img src="images/food-example.jpeg" height="80" />
+    	</div>
+    	<div class="col-xs-8">
+    		<b ng-bind="gd.name"></b>
+    		<div class="good-description" ng-bind="gd.description"></div>
+    		<div class="good-vote">
+    			<rating></rating>
+    		</div>
+    		<div class="good-action">
+    			<label class="good-price">￥{{gd.price}}</label>
+    			<div class="pull-right">
+    				<a class=""><i class="glyphicon glyphicon-plus-sign"></i></a>
+    			</div>
+    		</div>    		
+    	</div>
+    </div>
+</div>

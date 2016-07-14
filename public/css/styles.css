@@ -3,7 +3,7 @@ html, body {
 }
 
 body {
-	min-width: 20em;
+	height: 100%;
 	width: 100%;
 	background: #f2f2f2;
 	color: #333;
@@ -18,10 +18,6 @@ ol, ul {
     list-style: none;
     padding: 0;
     margin: 0;
-}
-
-.appBody {
-	padding-bottom: 54px;
 }
 
 .shop-header {
@@ -56,6 +52,9 @@ a {
 	background: 0 0;
 	text-decoration: none;
 	cursor: pointer;
+}
+a:focus, a:hover {
+    text-decoration: none;
 }
 .header-user-info {
 	font-size: .75rem;
@@ -119,12 +118,68 @@ a {
 	overflow-y: auto;
 	background: #f7f7f7; 
 }
-.restaurant-menu {
+.restaurant-menu, .restaurant-food {
 	box-sizing: border-box;
+	padding: 0;
 }
 
 .restaurant-food {
 	height: 100%;
 	overflow-y: auto; 
-	background: #e9e9e9;
+}
+.restaurant-menu .restaurant-menu-item.active {
+    margin-right: -1px;
+    background: #fff;
+    border-right-color: #fff;
+    border-left: 2px solid #3199e8;
+}
+.list-group-item:first-child {
+	border-radius: 0;
+}
+.restaurant-menu-description {
+	white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-weight: 400;
+    font-size: 12px;
+    background: #eceff1;
+    color: #666;
+    margin-bottom: 0;
+    padding: 9px;
+}
+.list-group {
+	margin-bottom: 0;
+}
+.good-vote {
+	margin: 10px 0;
+}
+.good-item {
+	padding-left: 0;
+	padding-right: 0;
+}
+.good-action {
+	/*height: 50px;
+	line-height: 50px;*/
+}
+.good-price {
+	color: #ff6000;
+}
+.rating-link {
+	color: #aaa;
+	text-decoration: none;
+}
+.menu-cart {
+	position: fixed;
+	bottom: 0;
+	background: #323941;
+	height: 45px;
+	line-height: 45px;
+	width: 100%;
+	color: #fff;
+}
+.mcart-checkout {
+	padding: 6px 18px;
+    border-radius: 2px;
+    background: #4cd964;
+    color: #fff;
 }

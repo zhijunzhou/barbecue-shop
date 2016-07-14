@@ -58,8 +58,8 @@ define(['angular'], function(angular) {
                 restaurant: "="
             },
             templateUrl: "tpls/tabs.html",
-            link: function(r) {
-                r.tabs = [{
+            link: function(scope) {
+                scope.tabs = [{
                     name: "菜单",
                     state: "menu"
                 }, {
@@ -69,16 +69,46 @@ define(['angular'], function(angular) {
                     name: "商家",
                     state: "info"
                 }],
-                r.changeState = function(r) {
-                    
+                scope.changeState = function(scope, element, attrs) {
+                    // todo
                 }
             }
         };
     });
 
     app.directive('menuNav', function() {
-
+        return {
+            restrict: "E",
+            scope: {
+                itemsTypes: '=items',
+                good:"=category"
+            },
+            templateUrl: "tpls/menu.html",
+            link: function (scope, element, attrs) {
+                scope.selectMenu = function (idx) {
+                    scope.good = idx;
+                }
+            }
+        };
     });
+
+    app.directive('restaurantFood', function () {
+        return {
+            restrict: "E",
+            scope: {
+                goods: '=goods'
+            },
+            templateUrl: "tpls/goods.html"
+        };
+    })
+
+    app.directive('rating', function () {
+        return {
+            restrict: "E",
+            scope: {},
+            template: '<a class="rating-link"><i class="glyphicon glyphicon-star" ng-repeat="x in [1,2,3,4,5]"></i>0评价</a>'
+        }
+    })
 
     app.directive('loading', function() {
         return {
