@@ -31,8 +31,8 @@ define(['angular', 'services','directives', 'data'], function(angular, services,
                     $scope.currentGoods = gt.goods;
                     $scope.currentName = gt.name;               
                 }
-            })
-        })
+            });
+        });
 
     });
 

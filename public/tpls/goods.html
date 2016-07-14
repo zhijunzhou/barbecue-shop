@@ -2,9 +2,12 @@
 	<div class="list-group-item" ng-show="goods.length <= 0">该品类没有任何商品</div>
 	 
     <div class="list-group-item good-item col-xs-12" ng-repeat="gd in goods">
-    	<div class="col-xs-4">
-    		<img src="images/food-example.jpeg" height="80" />
+    	<div class="col-xs-4" ng-show="gd.pics.length > 0">
+    		<img ng-src="{{gd.pics[0]}}" height="80" />
     	</div>
+        <div class="col-xs-4 no-pic" ng-show="gd.pics.length <= 0">
+            暂无图片
+        </div>
     	<div class="col-xs-8">
     		<b ng-bind="gd.name"></b>
     		<div class="good-description" ng-bind="gd.description"></div>
@@ -14,7 +17,9 @@
     		<div class="good-action">
     			<label class="good-price">￥{{gd.price}}</label>
     			<div class="pull-right">
-    				<a class=""><i class="glyphicon glyphicon-plus-sign"></i></a>
+                    <cart-decrease ng-click="decrease()"></cart-decrease>
+                    <span ng-bind="1"></span>
+    				<cart-add ng-click="add()"></cart-add>
     			</div>
     		</div>    		
     	</div>

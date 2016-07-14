@@ -9,17 +9,29 @@ define(function (require) {
 					_id: '10001',
 					name: 'Shan xi Rice',
 					price: 3.25,
-					description: "优质的大米，只为优质的生活！"					
+					reserve: 100,
+					sold:0,
+					piece:'kg',
+					description: "优质的大米，只为优质的生活！",
+					pics:['images/food-example.jpeg']					
 				}, {
 					_id: '10002',
 					name: 'Shuan Yang rou',
-					price: 23.25,		
-					description: "经典涮羊肉，满足你的味蕾！"
+					price: 23.25,
+					reserve: 100,
+					sold:0,
+					piece:'kg',
+					description: "经典涮羊肉，满足你的味蕾！",
+					pics:[]
 				}, {
 					_id: '10003',
 					name: 'Zhou Hey Ya',
-					price: 21.5,		
-					description: "周黑鸭-武汉老字号，百年传承，中国武汉的符号！"
+					price: 21.5,
+					reserve: 100,
+					sold:0,
+					piece:'袋',
+					description: "周黑鸭-武汉老字号，百年传承，中国武汉的符号！",
+					pics:['images/food-example.jpeg']
 				}
 			]
 		}, {

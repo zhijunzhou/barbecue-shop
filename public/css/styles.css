@@ -183,3 +183,7 @@ a:focus, a:hover {
     background: #4cd964;
     color: #fff;
 }
+.no-pic {
+	color: #ccc;
+	text-align: center;
+}

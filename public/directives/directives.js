@@ -68,10 +68,10 @@ define(['angular'], function(angular) {
                 }, {
                     name: "商家",
                     state: "info"
-                }],
+                }];
                 scope.changeState = function(scope, element, attrs) {
                     // todo
-                }
+                };
             }
         };
     });
@@ -87,7 +87,7 @@ define(['angular'], function(angular) {
             link: function (scope, element, attrs) {
                 scope.selectMenu = function (idx) {
                     scope.good = idx;
-                }
+                };
             }
         };
     });
@@ -100,15 +100,29 @@ define(['angular'], function(angular) {
             },
             templateUrl: "tpls/goods.html"
         };
-    })
+    });
+
+    app.directive('cartAdd', function() {
+        return {
+            restrict: "E",
+            template: '<a class="btn-add" ><i class="glyphicon glyphicon-plus-sign"></i></a>'
+        };
+    });
+
+    app.directive('cartDecrease', function() {
+        return {
+            restrict: "E",
+            template: '<a class="btn-minus" ><i class="glyphicon glyphicon-minus-sign"></i></a>'
+        };
+    });
 
     app.directive('rating', function () {
         return {
             restrict: "E",
             scope: {},
             template: '<a class="rating-link"><i class="glyphicon glyphicon-star" ng-repeat="x in [1,2,3,4,5]"></i>0评价</a>'
-        }
-    })
+        };
+    });
 
     app.directive('loading', function() {
         return {
@@ -123,7 +137,7 @@ define(['angular'], function(angular) {
                         $(element).hide();
                 });
             }
-        }
+        };
     });
 
     return app;
