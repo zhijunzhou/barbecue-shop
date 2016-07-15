@@ -10,12 +10,11 @@ require.config({
         'filters': 'filters/filters',
         'directives': 'directives/directives',
         'services':'services/services',
+        'factories': 'services/factories',
         'data':'model/data'
     },
     map:{
-      '*': {
-        'css': 'require-css/css'
-      }
+      
     },
     shim:{
         jquery:{
@@ -37,13 +36,13 @@ require.config({
             deps: ['angular'],
         }
     },
-    // urlArgs: "t=" + (new Date()).getTime()
+    // urlArgs: 't=' + (new Date()).getTime()
 });
 
 function createStyleSheet(url) {
     var link = document.createElement('link');
     link.type = 'text/css';
-    link.rel = "stylesheet";
+    link.rel = 'stylesheet';
     link.href= url;
     document.getElementsByTagName('head')[0].appendChild(link);
 }
@@ -60,7 +59,7 @@ loadCss([
     'css/styles.css',
 ]);
 
-require(["angular","app"],function(angular,app){
+require(['angular','app'],function(angular,app){
     //angularjs start
     angular.bootstrap(document,['BarbecueShop']);
 });

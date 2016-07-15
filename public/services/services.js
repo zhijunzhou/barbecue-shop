@@ -52,11 +52,6 @@ define(['angular'], function(angular) {
         }
     });
 
-    // Shopping Cart
-    app.factory('Cart', function($rootScope) {
-        // todo
-    });
-
     return app;
 
 });

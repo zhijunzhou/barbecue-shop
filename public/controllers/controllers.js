@@ -1,6 +1,6 @@
 define(['angular', 'services','directives', 'data'], function(angular, services, directives, data) {
 
-    var app = angular.module('controllers', []);    
+    var app = angular.module('controllers', ['factories']);    
 
     app.constant('APP_TITLE', 'BB Shop');
 
