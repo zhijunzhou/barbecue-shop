@@ -1,6 +1,6 @@
 define(['angular'], function(angular) {
 
-    var app = angular.module('directives', []);
+    var app = angular.module('directives', ['factories']);
 
     app.directive('emptyLine', function() {
         return {
@@ -102,17 +102,28 @@ define(['angular'], function(angular) {
         };
     });
 
-    app.directive('cartAdd', function() {
+    app.directive('cartAdd', ['Cart',function(Cart) {
         return {
             restrict: "E",
-            template: '<a class="btn-add" ><i class="glyphicon glyphicon-plus-sign"></i></a>'
+            template: '<a class="btn-add"><i class="glyphicon glyphicon-plus-sign"></i></a>',
+            link: function (scope, element, attrs) {
+                scope.count = 0;
+                scope.add = function (o) {
+                    Cart.addProduct(o);
+                    ++scope.count;
+                }
+                scope.decrease = function (o) {
+                    Cart.decreaseProduct(o);
+                    --scope.count;
+                }
+            }
         };
-    });
+    }]);
 
     app.directive('cartDecrease', function() {
         return {
             restrict: "E",
-            template: '<a class="btn-minus" ><i class="glyphicon glyphicon-minus-sign"></i></a>'
+            template: '<a class="btn-minus"><i class="glyphicon glyphicon-minus-sign"></i></a>'
         };
     });
 
