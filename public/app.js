@@ -15,6 +15,10 @@ define(['angular', 'require', 'angular-route','angular-resource','bootstrap','co
                 controller: 'ShopController',
                 templateUrl: 'tpls/shop.html'
             })
+            .when('/mcart', {
+                controller: 'McartController',
+                templateUrl: 'tpls/mcart.html'
+            })
             .otherwise({
                 redirectTo: '/'
             });

@@ -1,0 +1,46 @@
+<div ng-controller="McartController">
+	<header class="shop-header">
+		<a class="header-back col-xs-4" ng-href="/shop">
+			<i class="glyphicon glyphicon-chevron-left"></i>
+		</a>
+		<div class="header-title col-xs-4 text-center">
+			<b>已点菜单</b>
+		</div>
+		<div class="col-xs-4"></div>
+	</header>
+	<div class="col-xs-12 text-center" ng-if="!cartData || cartData.length <= 0">		
+    	<div class="no-pic empty-cart-info">
+			<h1><i class="glyphicon glyphicon-shopping-cart"></i></h1>
+    		<p class="">购物车什么都没有，快去点餐吧！</div>
+    	</div>    	
+    </div>
+	<div class="ui-block" ng-if="cartData && cartData.length > 0">
+		<div class="list-group-item good-item col-xs-12" ng-repeat="gd in cartData">
+			<div class="col-xs-4 text-center" ng-if="gd.pics.length > 0">
+	    		<img ng-src="{{gd.pics[0]}}" height="50" />
+	    	</div>
+	        <div class="col-xs-4 no-pic" ng-if="gd.pics.length <= 0">
+	            暂无图片
+	        </div>
+	    	<div class="col-xs-4">
+	    		<b ng-bind="gd.name"></b>
+	    	</div>
+	    	<div class="col-xs-2">
+				<label class="good-count">&times;{{gd.count}}</label>
+	    	</div>
+	    	<div class="col-xs-2">
+				<label class="good-price">￥{{gd.price*gd.count}}</label>
+	    	</div>	
+		</div>
+	</div>
+	<div class="col-xs-12 text-right" ng-if="totalCount > 0">
+		<h2 class="mcart-total">
+			<i class="glyphicon glyphicon-shopping-cart"></i>
+			&nbsp;{{totalCount}}份 
+			<label class="good-price">￥{{totalPrice}}</label>
+		</h2>
+	</div>
+	<div class="col-xs-12" ng-if="totalCount > 0">
+		<button class="mbtn mbtn-confirm"><b class="white">立即结算</b></button>
+	</div>
+</div>

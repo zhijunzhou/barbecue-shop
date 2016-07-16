@@ -19,9 +19,13 @@
 		</div>
 	</div>
 	<div class="menu-cart">
-		<div class="col-xs-6"><i class="glyphicon glyphicon-shopping-cart"></i>0份 ￥0.00</div>
+		<div class="col-xs-6">
+			<a href="/mcart" class="mcart-info">
+				<i class="glyphicon glyphicon-shopping-cart"></i>&nbsp;{{totalCount}}份 ￥{{totalPrice}}
+			</a>
+		</div>
 		<div class="col-xs-6 text-right">
-			<a href="" class="mcart-checkout">确认下单</a>
+			<a href="/checkout" class="mcart-checkout">确认下单</a>
 		</div>
 	</div>
 </div>

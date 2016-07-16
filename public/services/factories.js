@@ -2,7 +2,7 @@ define(['angular'], function (angular) {
 
 	var app = angular.module('factories', []);
 
-	app.factory('Cart', function () {
+	app.factory('Cart', function ($rootScope) {
 		var cartData = [];
 
 		return {
@@ -19,6 +19,7 @@ define(['angular'], function (angular) {
 					goods.count = goods.count || 1;
 					cartData.push(goods);
 				}
+				$rootScope.cartData = cartData;
 			},
 			removeProduct: function (goods) {
 				// clear the goods
@@ -27,7 +28,8 @@ define(['angular'], function (angular) {
 						cartData.remove(gd);
 						return;
 					}
-				})
+				});
+				$rootScope.cartData = cartData;
 			},
 			decreaseProduct: function (goods) {
 				// decrease goods count
@@ -36,13 +38,14 @@ define(['angular'], function (angular) {
 						gd.count = gd.count - 1;
 						return;
 					}
-				})
+				});
+				$rootScope.cartData = cartData;
 			},
 			getProducts: function () {
 				return cartData;
 			}
-		}
-	})
+		};
+	});
 
 	return app;
 
