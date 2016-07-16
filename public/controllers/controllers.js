@@ -4,7 +4,24 @@ define(['angular', 'services','directives', 'data'], function(angular, services,
 
     app.constant('APP_TITLE', 'BB Shop');
 
-    app.controller("rootCtrl", function ($scope) {
+    app.controller("rootCtrl", function ($scope, $rootScope) {
+        
+
+        $scope.$watch(function() {
+            return $rootScope.cartData;
+        }, function() {
+            $scope.totalCount = 0;
+            $scope.totalPrice = 0.0;
+            
+            $scope.cartData = $rootScope.cartData;
+            if($scope.cartData) {                
+                $rootScope.cartData.forEach(function(goods) {
+                    $scope.totalCount += goods.count || 0;
+                    $scope.totalPrice += (goods.count || 0) * (goods.price || 0);
+                });
+            }
+
+        }, true);
     });
 
     app.controller("HomeController", function($scope, APP_TITLE) {
@@ -15,21 +32,24 @@ define(['angular', 'services','directives', 'data'], function(angular, services,
 
     });
 
-    app.controller("ShopController", function($scope, APP_TITLE) {
-        $scope.shop_title = APP_TITLE;
-        $scope.tabs = data.tabs;
-        $scope.currentState = "menu";
+    app.controller("ShopController", function($scope, APP_TITLE, Cart) {
+        $scope.tabs  = data.tabs;
         $scope.types = data.goodTypes;
-        $scope.currentType = "1"; // type id
+        $scope.Cart  = Cart;
+
+        $scope.shop_title   = APP_TITLE;
+
+        $scope.currentState = "menu";
+        $scope.currentType  = "1"; // type id
         $scope.currentGoods = [];
-        $scope.currentName = "";
+        $scope.currentName  = "";
 
         $scope.$watch('currentType', function (n, o) {
             // console.log(n + 'changed' + o);
             $scope.types.forEach(function (gt, i) {
                 if(gt._id === $scope.currentType) {
                     $scope.currentGoods = gt.goods;
-                    $scope.currentName = gt.name;               
+                    $scope.currentName  = gt.name;               
                 }
             });
         });
