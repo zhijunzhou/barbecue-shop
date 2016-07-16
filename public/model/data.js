@@ -3,11 +3,11 @@ define(function (require) {
 	var goodTypes = [
 		{
 			_id: '1',
-			name: 'Type 1',
+			name: '热门推荐',
 			goods: [
 				{
 					_id: '10001',
-					name: 'Shan xi Rice',
+					name: '山西米饭',
 					price: 3.25,
 					reserve: 100,
 					sold:0,
@@ -16,7 +16,7 @@ define(function (require) {
 					pics:['images/food-example.jpeg']					
 				}, {
 					_id: '10002',
-					name: 'Shuan Yang rou',
+					name: '新疆涮羊肉',
 					price: 23.25,
 					reserve: 100,
 					sold:0,
@@ -25,22 +25,31 @@ define(function (require) {
 					pics:[]
 				}, {
 					_id: '10003',
-					name: 'Zhou Hey Ya',
+					name: '周黑鸭',
 					price: 21.5,
 					reserve: 100,
 					sold:0,
 					piece:'袋',
 					description: "周黑鸭-武汉老字号，百年传承，中国武汉的符号！",
 					pics:['images/food-example.jpeg']
+				}, {
+					_id: '10004',
+					name: '小亮蒸虾',
+					price: 128,
+					reserve: 10000,
+					sold:0,
+					piece:'锅',
+					description: "夏天叫上几个朋友，点一份小亮蒸虾，再来一打啤酒，爽爽快快的剥虾，聊天，看星辰忆往事！",
+					pics:['images/food-example.jpeg']
 				}
 			]
 		}, {
 			_id: '2',
-			name: 'Type 2',
+			name: '豪华双拼',
 			goods: []
 		}, {
 			_id: '3',
-			name: 'Type 3',
+			name: '情侣套餐',
 			goods: []
 		}
 	];

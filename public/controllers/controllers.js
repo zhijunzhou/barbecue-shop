@@ -12,7 +12,7 @@ define(['angular', 'services','directives', 'data'], function(angular, services,
         }, function() {
             $scope.totalCount = 0;
             $scope.totalPrice = 0.0;
-            
+
             $scope.cartData = $rootScope.cartData;
             if($scope.cartData) {                
                 $rootScope.cartData.forEach(function(goods) {
@@ -54,6 +54,10 @@ define(['angular', 'services','directives', 'data'], function(angular, services,
             });
         });
 
+    });
+
+    app.controller("McartController", function($scope) {
+        
     });
 
     return app;
