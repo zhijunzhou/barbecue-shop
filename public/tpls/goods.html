@@ -3,7 +3,7 @@
 	 
     <div class="list-group-item good-item col-xs-12" ng-repeat="gd in goods">
     	<div class="col-xs-4 text-center" ng-show="gd.pics.length > 0">
-    		<img ng-src="{{gd.pics[0]}}" height="80" />
+    		<img ng-src="{{gd.pics[0]}}" class="food-img" />
     	</div>
         <div class="col-xs-4 no-pic" ng-show="gd.pics.length <= 0">
             暂无图片

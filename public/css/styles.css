@@ -12,6 +12,7 @@ body {
 
 body {
 	margin: 0;
+	overflow: hidden;
 }
 
 ol, ul {
@@ -130,6 +131,9 @@ a:focus, a:hover {
 	overflow-y: auto; 
 	background: #f7f7f7;
 }
+.food-img {
+	height: 6em;
+}
 .restaurant-menu .restaurant-menu-item.active {
     margin-right: -1px;
     background: #fff;
@@ -149,7 +153,7 @@ a:focus, a:hover {
     text-overflow: ellipsis;
     font-weight: 400;
     font-size: 12px;
-    background: #eceff1;
+    /*background: #eceff1;*/
     color: #666;
     margin-bottom: 0;
     padding: 9px;
