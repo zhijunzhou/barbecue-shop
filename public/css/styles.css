@@ -128,6 +128,7 @@ a:focus, a:hover {
 .restaurant-food {
 	height: 100%;
 	overflow-y: auto; 
+	background: #f7f7f7;
 }
 .restaurant-menu .restaurant-menu-item.active {
     margin-right: -1px;
@@ -155,6 +156,7 @@ a:focus, a:hover {
 }
 .list-group {
 	margin-bottom: 0;
+	height: 100%;
 }
 .good-vote {
 	margin: 10px 0;
