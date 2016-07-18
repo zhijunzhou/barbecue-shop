@@ -6,6 +6,7 @@ require.config({
         'angular': 'libs/angular',
         'angular-route': 'libs/angular-route',
         'angular-resource':'libs/angular-resource',
+        'uiSwitch':'libs/angular-ui-switch',
         'controllers':'controllers/controllers',
         'filters': 'filters/filters',
         'directives': 'directives/directives',
@@ -33,7 +34,10 @@ require.config({
             deps: ['angular']
         },
         'angular-resource':{
-            deps: ['angular'],
+            deps: ['angular']
+        },
+        'uiSwitch': {
+            deps: ['angular']
         }
     },
     waitSeconds:0,
@@ -57,6 +61,7 @@ function loadCss(urls) {
 
 loadCss([
     'libs/bootstrap.min.css',
+    'libs/angular-ui-switch.css',
     'css/styles.css',
 ]);
 

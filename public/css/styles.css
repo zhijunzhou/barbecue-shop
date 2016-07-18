@@ -234,3 +234,21 @@ a:focus, a:hover {
 .empty-cart-info {
 	margin-top: 40%;
 }
+.btn-add, .btn-minus {
+	font-size: 1.8em;
+	color: #4cd964;
+}
+.btn-add:focus, .btn-minus:focus, .btn-add:hover, .btn-minus:hover {
+	color: #4cd964;
+}
+.food-count {
+	font-size: 1.8em;
+}
+.mark-container {
+	margin-top: 20px;
+}
+.count-asc, .count-dec {
+	font-size: 1em;
+	border:1px solid #4cd964;
+	border-radius: 50%;
+}

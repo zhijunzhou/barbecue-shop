@@ -1,8 +1,8 @@
-define(['angular', 'require', 'angular-route','angular-resource','bootstrap','controllers',
+define(['angular', 'require', 'angular-route','angular-resource', 'uiSwitch','bootstrap','controllers',
     'filters','directives','services','factories','data'], function (angular, require) {
 
     var app = angular.module('BarbecueShop', 
-        ['ngRoute','ngResource','controllers','filters','directives','services']);
+        ['ngRoute','ngResource','controllers','filters','directives','services', 'uiSwitch']);
 
     app.config(function($routeProvider,$locationProvider,$controllerProvider) {
 

@@ -60,8 +60,26 @@ define(['angular', 'services','directives', 'data'], function(angular, services,
 
     });
 
-    app.controller("McartController", function($scope) {
-        
+    app.controller("McartController", function($scope, $rootScope, Cart) {
+        $scope.chili = true;
+        $scope.tensFlag = false;
+
+        $scope.changeTaste = function(s) {
+            Cart.setAllTaste(s);
+        };
+
+        $scope.changeTens = function(tensFlag) {
+            if(tensFlag) Cart.setTimes(10);
+            else Cart.setTimes(1);
+        };
+
+        $scope.countPlus = function(gd) {
+            Cart.addProduct(gd);
+        };
+
+        $scope.countMinus = function(gd) {
+            Cart.decreaseProduct(gd);
+        };
     });
 
     return app;

@@ -18,7 +18,7 @@
     			<label class="good-price">￥{{gd.price}}</label>
     			<div class="pull-right">
                     <cart-decrease ng-click="decrease(gd)" ng-show="count > 0"></cart-decrease>
-                    <span ng-bind="count" ng-show="count > 0"></span>
+                    <span class="food-count" ng-bind="count" ng-show="count > 0"></span>
     				<cart-add ng-click="add(gd)"></cart-add>
     			</div>
     		</div>    		
