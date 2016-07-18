@@ -1,5 +1,5 @@
-html, body {
-	min-height: 100%;
+html {
+	height: 100%;
 }
 
 body {
@@ -19,6 +19,12 @@ ol, ul {
     list-style: none;
     padding: 0;
     margin: 0;
+}
+.body-wrapper {
+	height: 100%;
+}
+.restaurant-container {
+	height: 100%;
 }
 .white {
 	color: #fff;
@@ -188,6 +194,10 @@ a:focus, a:hover {
 	line-height: 45px;
 	width: 100%;
 	color: #fff;
+}
+.bottom-render {
+	width: 100%;
+	height: 45px;
 }
 .mcart-info {
 	color: #fff;

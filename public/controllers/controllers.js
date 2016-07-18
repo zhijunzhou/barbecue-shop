@@ -54,7 +54,7 @@ define(['angular', 'services','directives', 'data'], function(angular, services,
             });
         });
 
-        $('.restaurant-content').height(screen.height - $('.shop-header').outerHeight(true) - $('.menu-cart').outerHeight(true) * 2);
+        $('.restaurant-content').height($('body').outerHeight(true) - $('.shop-header').outerHeight(true) - $('.menu-cart').outerHeight(true) * 2);
 
         // $('.restaurant-food').height(screen.height - $('.shop-header').outerHeight(true) - $('.menu-cart').outerHeight(true) * 2);
 

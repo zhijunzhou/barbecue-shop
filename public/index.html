@@ -11,8 +11,10 @@
     <meta http-equiv="expires" content="Tue, 03 Jan 2017 10:07:55 GMT" />
 </head>
 
-<body ng-controller="rootCtrl">
-    <ng-view></ng-view>
+<body>
+	<div ng-controller="rootCtrl" class="body-wrapper">
+    	<ng-view></ng-view>
+    </div>
 </body>
 <script type="text/javascript" src="libs/require.js" defer async data-main="app.config.js"></script>
 

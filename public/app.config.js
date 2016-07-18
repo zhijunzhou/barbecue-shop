@@ -36,6 +36,7 @@ require.config({
             deps: ['angular'],
         }
     },
+    waitSeconds:0,
     // urlArgs: 't=' + (new Date()).getTime()
 });
 
