@@ -8,15 +8,15 @@ define(['angular', 'require', 'angular-route','angular-resource', 'uiSwitch','bo
 
         $routeProvider
             .when('/', {
-                controller: 'HomeController',
+                // controller: 'HomeController',
                 templateUrl:'tpls/home.html'
             })
             .when('/shop', {
-                controller: 'ShopController',
+                // controller: 'ShopController',
                 templateUrl: 'tpls/shop.html'
             })
             .when('/mcart', {
-                controller: 'McartController',
+                // controller: 'McartController',
                 templateUrl: 'tpls/mcart.html'
             })
             .otherwise({
